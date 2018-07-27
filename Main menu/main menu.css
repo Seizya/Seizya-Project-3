@@ -66,7 +66,7 @@ body {
 }
 
 #circle {
-    background-image: url('./img/smg5.png');
+    background-image: url('./img/smg/smg5.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -100,11 +100,11 @@ body {
     animation-direction: reverse;
 }
 #circle2.one{
-    background-image: url('./img/smg6.png');
+    background-image: url('./img/smg/smg6.png');
 }
 
 #circle2.two{
-    background-image: url('./img/smg10.png');
+    background-image: url('./img/smg/smg10.png');
 }
 
 #smbg {

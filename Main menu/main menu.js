@@ -31,9 +31,9 @@ bg_chenge.addEventListener('click', () => {
     console.log(clickc)
     if (clickc) {
         document.getElementById("bg").className = "one";
-        document.getElementById("circle2").className = "one";
+        document.getElementById("circle").className = "one";
     } else {
         document.getElementById("bg").className = "two";
-        document.getElementById("circle2").className = "two";
+        document.getElementById("circle").className = "two";
     }
 }, false);

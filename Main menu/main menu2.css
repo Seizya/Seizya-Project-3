@@ -1,0 +1,174 @@
+
+
+#start {
+    position: absolute;
+    bottom: 10vmin;
+    right: -2px;
+    width: 46vmin;
+    height: 10vmin;
+    background: rgba(16,87,121,.8);
+    cursor: pointer;
+    border: solid 2px white;
+    font-size: 9vmin;
+    text-align: left;
+    transition: all 350ms ease-in;
+    color:white;
+}
+
+#start:hover {
+    background: rgba(255, 255, 255, .8);
+    box-shadow: 0 5px 10px white, 0 1px 6px -1px white;
+    border: solid 2px black;
+    width: 100vw;
+    color:black;
+}
+
+@keyframes scrolls {
+    30% {
+        width: 85vmin;
+        height: 6vmin;
+    }
+    to {
+        width: 85vmin;
+        height: calc(100vh - 4vmin);
+    }
+}
+
+@keyframes scrollo {
+    from {
+        width: 85vmin;
+        height: 93vh;
+    }
+    70% {
+        width: 85vmin;
+        height: 6vmin;
+    }
+    to {
+        width: 45vmin;
+        height: 6vmin;
+    }
+}
+
+#scroll {
+    position: absolute;
+    bottom: 2vmin;
+    right: -2px;
+    width: 45vmin;
+    height: 6vmin;
+    background: rgba(255, 255, 255, .5);
+    border: solid 2px white;
+    /*transition: all 500ms ease-in-out;*/
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#scroll>* {
+    transition: all 100ms -25ms ease-in-out;
+}
+
+#scroll.hover {
+    animation-name: scrolls;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    /*animation-direction:normal;*/
+    box-shadow: 0 5px 10px white, 0 1px 6px -1px white;
+    background: rgba(255, 254, 251, 0.95);
+}
+
+#scroll.out {
+    animation-name: scrollo;
+    animation-duration: 500ms;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+
+#dummy {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: inherit;
+    height: inherit;
+    margin-right: -16px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+#dummy li {
+    margin-left: 1em;
+}
+
+#menu {
+    position: absolute;
+    top: 2vmin;
+    right: -2px;
+    width: 45vmin;
+    height: 10vmin;
+    background: rgba(255, 255, 255, .4);
+    border: solid 2px white;
+    font-size: 8vmin;
+    transition: all 350ms ease-out;
+    transition-delay: 350ms;
+    cursor: pointer;
+}
+
+#menu.hover {
+    width: 100vw;
+    background: rgba(16,87,121,1);
+    transition: all 350ms ease-out;
+    color:white;
+}
+
+#menus {
+    position: absolute;
+    top: 10vmin;
+    right: -2px;
+    width: calc(100vw + 4px);
+    height: 0;
+    background: rgba(255, 255, 255, .5);
+    transition: all 350ms ease-out;
+    z-index: auto;
+    overflow: hidden;
+    color:black;
+}
+
+#menus.hover {
+    position: absolute;
+    height: calc(100vh - 12vmin - 2vmin);
+    background: rgba(255, 254, 251, 0.95);
+    transition: all 350ms ease-out;
+    transition-delay: 350ms;
+    z-index: 1;
+}
+
+#menu_countents {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% + 16px);
+    height: inherit;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: -16px;
+    margin-left: 0;
+    list-style: none;
+    padding:0;
+}
+
+#menu_countents li {
+    margin-left: 1em;
+    margin:0;
+}
+
+#menu_countents li:hover {
+    background: rgba(16,87,121,.7);
+    color:white;
+}

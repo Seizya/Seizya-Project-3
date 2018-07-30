@@ -1,0 +1,88 @@
+*{
+	position:absolute;
+	margin:0;
+	padding:0;	
+	overflow:hidden;
+	font-family: "Open Sans", "Rounded Mplus 1c", "Kokoro", 'Noto Sans Japanese', "Yu Gothic", "Meiryo UI", sans-serif;
+	font-weight: 300;
+}
+
+#bg{
+	position:relative;
+	top:0;
+	left:0;
+	width:100vw;
+	height:100vh;
+	background:rgba(0,0,0,.8);
+}
+
+@keyframes tp{
+	from{width:0vw;}
+	to{width:100vw}
+}
+
+
+#top{
+	top:0;
+	left:0;
+	height:10vh;
+	background:black;
+	cursor:pointer;
+    animation-name: tp;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-duration:500ms;
+    animation-fill-mode: forwards;
+    /*animation-direction:normal;*/
+}
+
+#back{
+	color:white;
+	font-size:8.5vh;
+	left:1vw;
+}
+
+#back:hover{
+	box-shadow:3px 0 15px 1px white, -3px 0 15px 1px white;
+	background:rgba(255,255,255,.2);
+}
+
+#left{
+	top:10vh;
+	left:0;
+	height:90vh;
+	background:green;
+	transition: all 350ms ease-out;
+	border-right:solid 10px white;
+}
+
+#left.true{	
+	width:calc(70vw - 10px);
+}
+
+#left.false{
+	width:100vw;
+}
+
+#level{
+	top:0;
+	left:0;
+	width:inherit;
+	height:inherit;
+}
+
+#right{
+	top:10vh;
+	right:0;
+	height:90vh;
+	background:red;
+	transition: all 350ms ease-out;
+}
+
+#right.true{
+	width:30vw;
+}
+
+#right.false{
+	width:0vw;
+}

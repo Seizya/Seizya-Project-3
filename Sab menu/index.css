@@ -1,5 +1,4 @@
 *{
-	position:absolute;
 	margin:0;
 	padding:0;	
 	overflow:hidden;
@@ -13,7 +12,10 @@
 	left:0;
 	width:100vw;
 	height:100vh;
-	background:rgba(0,0,0,.8);
+	background:url(./img/d45c9a196bf9fafaeb3234b7bec8897c_t.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 @keyframes tp{
@@ -23,11 +25,12 @@
 
 
 #top{
+	position:absolute;
+	position:absolute;
 	top:0;
 	left:0;
-	height:10vh;
-	background:black;
-	cursor:pointer;
+	height:7vh;
+	background:rgba(16,87,121,1);
     animation-name: tp;
     animation-timing-function: ease-out;
     animation-iteration-count: 1;
@@ -37,9 +40,11 @@
 }
 
 #back{
+	position:absolute;
 	color:white;
-	font-size:8.5vh;
+	font-size:6vh;
 	left:1vw;
+	cursor:pointer;
 }
 
 #back:hover{
@@ -47,17 +52,37 @@
 	background:rgba(255,255,255,.2);
 }
 
+@keyframes tlt{
+	from{left:-20vh;}
+	to{left:100vw;}
+}
+
+#tlight{
+	position:absolute;
+	top:-5vh;
+	left:-20vh;
+	width:17vh;
+	height:17vh;
+	background: radial-gradient(circle closest-side, white, rgba(16,87,121,1));
+
+	animation-name:tlt;
+	animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-delay: 1s;
+}
+
 #left{
-	top:10vh;
+	position:absolute;
+	top:7vh;
 	left:0;
-	height:90vh;
-	background:green;
+	height:93vh;
 	transition: all 350ms ease-out;
-	border-right:solid 10px white;
 }
 
 #left.true{	
-	width:calc(70vw - 10px);
+	width:70vw;
 }
 
 #left.false{
@@ -67,15 +92,25 @@
 #level{
 	top:0;
 	left:0;
-	width:inherit;
+	width:unset;
 	height:inherit;
+    margin-right: -16px;
+    overflow-y: scroll;
+}
+
+#level li {
+    margin-left: 1em;
 }
 
 #right{
-	top:10vh;
+	position:absolute;
+	top:7vh;
 	right:0;
-	height:90vh;
-	background:red;
+	height:93vh;
+	background:url(./img/nc119331.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
 	transition: all 350ms ease-out;
 }
 

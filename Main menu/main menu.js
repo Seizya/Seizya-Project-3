@@ -1,8 +1,6 @@
-var scroll = document.getElementById("scroll");
 var clicka = false;
-scroll.addEventListener('click', () => {
+document.getElementById("scroll").addEventListener('click', () => {
     clicka = !clicka;
-    console.log(clicka)
     if (clicka) {
         document.getElementById("scroll").className = "hover";
     } else {
@@ -10,11 +8,9 @@ scroll.addEventListener('click', () => {
     }
 }, false);
 
-var menu = document.getElementById("menu");
 var clickb = false;
-menu.addEventListener('click', () => {
+document.getElementById("menu").addEventListener('click', () => {
     clickb = !clickb;
-    //console.log(clickb)
     if (clickb) {
         document.getElementById("menu").className = "hover";
         document.getElementById("menus").className = "hover";
@@ -24,9 +20,8 @@ menu.addEventListener('click', () => {
     }
 }, false);
 
-var bg_chenge = document.getElementById("bg_chenge");
 var clickc = true;
-bg_chenge.addEventListener('click', () => {
+document.getElementById("bg_chenge").addEventListener('click', () => {
     clickc = !clickc;
     if (clickc) {
         document.getElementById("bg").className = "one";
@@ -41,9 +36,8 @@ bg_chenge.addEventListener('click', () => {
     }
 }, false);
 
-var gear_chenge = document.getElementById("gear_chenge");
 var clickd = true;
-gear_chenge.addEventListener('click', () => {
+document.getElementById("gear_chenge").addEventListener('click', () => {
     clickd = !clickd;
     console.log(clickd)
     if (clickd) {
@@ -58,5 +52,17 @@ gear_chenge.addEventListener('click', () => {
         document.getElementById("gear2").className = "on";
         document.getElementById("gear3").className = "on";
         document.getElementById("gear4").className = "on";
+    }
+}, false);
+
+var clicke = false;
+document.getElementById("start").addEventListener('click', () => {
+    clicke = !clicke;
+    if (clicke) {
+        document.getElementById("start").className = "hover";
+        document.getElementById("starts").className = "hover";
+    } else {
+        document.getElementById("start").className = "out";
+        document.getElementById("starts").className = "";
     }
 }, false);

@@ -132,6 +132,10 @@ body {
     width: calc(100vw - 50vmin);
     height: 54vmin;
     border: solid 2px white;
+
+    border-radius: 5px;     /* CSS3草案 */
+    -webkit-border-radius: 5px; /* Safari,Google Chrome用 */
+    -moz-border-radius: 5px;    /* Firefox用 */
 }
 
 #smbg:hover {
@@ -153,10 +157,10 @@ body {
     background-image: url('./img/smbg3.png');
 }
 
- @keyframes gea{
+@keyframes gea{
     from{transform:rotate(0deg);}
     to{transform:rotate(360deg);}
- }
+}
 
 #gear1{
     background-repeat: no-repeat;

@@ -46,12 +46,14 @@ document.getElementById("gear-chenge").addEventListener('click', () => {
     clickd = !clickd;
     console.log(clickd)
     if (clickd) {
+        document.getElementById("gear-chenge").innerHTML="Gear / static";
         document.getElementById("smbg2").className = "on";
         document.getElementById("gear1").className = "off";
         document.getElementById("gear2").className = "off";
         document.getElementById("gear3").className = "off";
         document.getElementById("gear4").className = "off";
     } else {
+        document.getElementById("gear-chenge").innerHTML="Gear / dynamic";
         document.getElementById("smbg2").className = "off";
         document.getElementById("gear1").className = "on";
         document.getElementById("gear2").className = "on";

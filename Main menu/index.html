@@ -13,8 +13,8 @@
 <body>
     <!-- Comment -->
     <div id="bg"class="one"></div>
-    <div id="line_x"class="one"></div>
-    <div id="line_y"class="one"></div>
+    <div id="line-x"class="one"></div>
+    <div id="line-y"class="one"></div>
     <div id="circle2"></div>
     <div id="circle"class="one"></div>
     <div id="smbg">
@@ -31,15 +31,22 @@
     </div>
     <div id="menu">
         Menu
-        <div id="music-menus"></div>
-        <div id="menus">
-            <ul id="menu_contents">
-                <li id="bg_chenge">Back Ground</li>
-                <li id="gear_chenge">Gear</li>
-                <li id="music">Music</li>
-                <li id="volume">Volume
-                    <input class="input-range" type="range" min="0" max ="1" step=".01">
+        <div id="music-menus">
+            <ul id="music-menu-contents">
+                <li id="music-menu-back"><= Back / Main menu</li> 
+                <li id="music-onff">ON/OFF</li>
+                <li>Volume / under<br>
+                    <input id="volume" class="input-range" type="range" 
+                    min="0" max =".6" step=".01" value=".3">
                 </li>
+            </ul>
+        </div>
+        <div id="menus">
+            <ul id="menu-contents">
+                <li id="menus-close">=> Close the Menu</li>
+                <li id="bg-chenge">Back Ground</li>
+                <li id="gear-chenge">Gear</li>
+                <li id="music">Music</li>
             </ul>
         </div>
     </div>
@@ -47,6 +54,7 @@
         <nobr>Game Start</nobr>
         <div id="starts">
             <ul id="st-contents">
+                <li id="st-close">=> Close the Menu</li>
                 <li id="battle"type="button" onclick="document.location.href = '../Sab menu/index.html'">Mode.バトル</li>
                 <li id="nurture">Mode.育成</li>
             </ul>

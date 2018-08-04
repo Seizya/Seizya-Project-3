@@ -39,15 +39,15 @@ body {
     /*border-bottom:solid 2px;*/
 }
 
-#line_x.one {
+#line-x.one {
     border-bottom: solid 2px black;
 }
 
-#line_x.two {
+#line-x.two {
     border-bottom: solid 2px white;
 }
 
-#line_y {
+#line-y {
     position: absolute;
     top: 0;
     left: -3px;
@@ -56,11 +56,11 @@ body {
     /*border-right:solid 2px;*/
 }
 
-#line_y.one{
+#line-y.one{
     border-right: solid 2px black;
 }
 
-#line_y.two {
+#line-y.two {
     border-right: solid 2px white;
 }
 

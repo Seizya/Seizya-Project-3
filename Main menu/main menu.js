@@ -20,6 +20,12 @@ document.getElementById("menu").addEventListener('click', () => {
     }
 }, false);
 
+document.addEventListener("load",()=>{
+    document.getElementById("menus").addEventHandler("click",function(ev){
+       ev.stopPropagation();
+   });
+})
+
 var clickc = true;
 document.getElementById("bg_chenge").addEventListener('click', () => {
     clickc = !clickc;
@@ -66,3 +72,19 @@ document.getElementById("start").addEventListener('click', () => {
         document.getElementById("starts").className = "";
     }
 }, false);
+
+var bgm = new Audio();
+bgm.src="./music/昨日話してたやつっぽいやつ-test4-.mp3";
+bgm.loop = true;
+bgm.volume = .1;
+/*var clickf = false;
+document.getElementById("music").addEventListener('click', () => {
+    clickf = !clickf;
+    if (clickf) {
+        bgm.play();
+        document.getElementById("music").innerHTML="Music // "+(clickf===false?"一時停止中":"再生中")+""
+    } else {
+        bgm.pause();
+        document.getElementById("music").innerHTML="Music // "+(clickf===false?"一時停止中":"再生中")+""
+    }
+}, false);*/

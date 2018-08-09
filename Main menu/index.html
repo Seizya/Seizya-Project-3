@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Seizya-Project-3</title>
+    <title>Seizya-Projects ver.3</title>
     <style>
     @import "./main menu.css";
     @import "./main menu2.css";
+    @import "./main menu3.css";
 </style>
 </head>
 
@@ -23,7 +24,7 @@
         <div id="gear3" class="off"></div>
         <div id="gear4" class="off"></div>
         <div id="gear5" class="off"></div>
-        <div id="smbg2"class="on">
+        <div id="smbg2"class="off">
             <div id="mbg">
                 <div id="foxa"></div>
             </div>
@@ -31,8 +32,20 @@
     </div>
     <div id="menu">
         Menu
-        <div id="music-menus">
-            <ul id="music-menu-contents">
+
+        <div id="bg-menus" class="menus-style">
+            <ul id="bg-menu-contents" class="menus-contents-style">
+                <li id="bg-menu-back"><= Back / Main menu</li> 
+                <li id="bg1">Star Night / Now</li>
+                <li id="bg2">Tittle pattern</li>
+                <li id="bg3">Sea</li>
+                <li id="bg4">Light tree</li>
+                </li>
+            </ul>
+        </div>
+
+        <div id="music-menus" class="menus-style">
+            <ul id="music-menu-contents" class="menus-contents-style">
                 <li id="music-menu-back"><= Back / Main menu</li> 
                 <li id="music-onff">ON/OFF</li>
                 <li>Volume / under<br>
@@ -41,22 +54,34 @@
                 </li>
             </ul>
         </div>
-        <div id="menus">
-            <ul id="menu-contents">
+
+        <div id="gear-menus"class="menus-style">
+            <ul id="gear-menu-contents"class="menus-contents-style">
+                <li id="gear-menu-back"><= Back / Main menu</li>
+                <li id="gear-off">off / Now</li>
+                <li id="gear-static">Static</li> 
+                <li id="gear-dynamic">Dynamic</li>               
+            </ul>
+        </div>
+
+        <div id="menus"class="menus-style">
+            <ul id="menu-contents"class="menus-contents-style">
                 <li id="menus-close">=> Close the Menu</li>
                 <li id="bg-chenge">Back Ground</li>
                 <li id="gear-chenge">Gear</li>
                 <li id="music">Music</li>
+                <li id="circle-chbge">Circle</li>
+                <li id="charactor">Charactor</li>
             </ul>
         </div>
     </div>
     <div id="start">
         <nobr>Game Start</nobr>
-        <div id="starts">
-            <ul id="st-contents">
+        <div id="starts"class="menus-style">
+            <ul id="st-contents"class="menus-contents-style">
                 <li id="st-close">=> Close the Menu</li>
                 <li id="battle"type="button" onclick="document.location.href = '../Sab menu/index.html'">Mode.バトル</li>
-                <li id="nurture">Mode.育成</li>
+                <li id="nurture">Mode.育成 / ver.4より実装</li>
             </ul>
         </div>
     </div>

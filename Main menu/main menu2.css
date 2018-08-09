@@ -47,7 +47,7 @@
     height: 10vmin;
 
     color: black;
-    background: rgba(255, 255, 255, .4);
+    background: rgba(255, 255, 255, .6);
     font-size: calc(9vmin - 4px);
     cursor: pointer;
     border: solid 2px black;
@@ -61,13 +61,15 @@
     -o-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
+
+    text-shadow: 0 0 10px white;
 }
 
 #start.hover {
     animation-name: sth;
     animation-delay: 0;
     animation-duration: 600ms;
-    animation-timing-function: ease-out;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 
@@ -80,9 +82,15 @@
     animation-name: sto;
     animation-delay: 250ms;
     animation-duration: 500ms;
-    animation-timing-function: ease-out;
+    animation-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
     animation-iteration-count: 1;
     animation-fill-mode: backwards;
+}
+
+#start:hover{
+    background: linear-gradient(90deg, rgba(16, 87, 121, 1), rgba(16, 87, 121, .3));
+    color:white;
+    transition-timing-function: ease-out;
 }
 
 #starts {
@@ -93,7 +101,7 @@
     height: 0;
 
     overflow: hidden;
-    transition: all 200ms ease-out;
+    transition: all 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
     z-index: auto;
     color: white;
     text-align:left;
@@ -112,7 +120,7 @@
     background-size: cover;
     background-position: center bottom;
 
-    transition: all 200ms ease-out;
+    transition: all 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition-delay: 650ms;
     z-index: 2;
 }
@@ -181,7 +189,7 @@
     width: 45vmin;
     height: 6vmin;
 
-    background: rgba(255, 255, 255, .5);
+    background: rgba(255, 255, 255, .6);
     border: solid 2px white;
     /*transition: all 500ms ease-in-out;*/
     overflow: hidden;
@@ -199,19 +207,24 @@
 }
 
 #scroll>* {
-    transition: all 100ms -25ms ease-in-out;
+    transition: all 100ms -25ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 #scroll.hover {
     animation-name: scrolls;
     animation-duration: 1s;
-    animation-timing-function: ease;
+    animation-timing-function:cubic-bezier(0.175, 0.885, 0.32, 1.275);
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     /*animation-direction:normal;*/
-    box-shadow: 0 5px 10px white, 0 1px 6px -1px white;
-    background: rgba(255, 254, 251, 0.95);
 
+    box-shadow: 0 5px 10px white, 0 1px 6px -1px white;
+    /*background: rgba(255, 254, 251, 0.95);*/
+
+    background: linear-gradient(90deg, rgba(16, 87, 121, 1), rgba(16, 87, 121, .3));
+    color:white;
+    transition-timing-function: ease-out;
+    
     border-radius: 0;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -220,10 +233,16 @@
 #scroll.out {
     animation-name: scrollo;
     animation-duration: 500ms;
-    animation-timing-function: ease;
+    animation-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     animation-direction: normal;
+}
+
+#scroll:hover{
+    background: linear-gradient(90deg, rgba(16, 87, 121, 1), rgba(16, 87, 121, .3));
+    color:white;
+    transition-timing-function: ease-out;
 }
 
 #dummy {
@@ -242,273 +261,4 @@
 
 #dummy li {
     margin-left: 1em;
-}
-
-@keyframes menu-chs{
-    to{
-        width: 100vw;
-        border: solid 2px black;
-
-        background:url(./img/nc9416.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: left center;
-
-        color: white;
-        text-shadow: 0 0 10px white;
-        box-shadow: 0 5px 10px white, 0 1px 6px -1px white;
-        z-index: 2;
-
-        border-radius: 0px;
-        -webkit-border-radius: 0px;
-        -moz-border-radius: 0px;
-
-        text-align:right;          
-    }
-}
-
-@keyframes menu-cho{
-    from{
-        width: 100vw;
-        border: solid 2px black;
-
-        background:url(./img/nc9416.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: left center;
-
-        color: white;
-        text-shadow: 0 0 10px white;
-        box-shadow: 0 5px 10px white, 0 1px 6px -1px white;
-        z-index: 2;
-
-        border-radius: 0px;
-        -webkit-border-radius: 0px;
-        -moz-border-radius: 0px;
-
-        text-align:right;          
-    }
-    to{
-        width: 45vmin;
-
-        background: rgba(255, 255, 255, .4);
-        border: solid 2px white;
-
-        border-radius: 5px;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-
-        text-align:left;
-    }
-}
-
-#menu {
-    position: absolute;
-    top:2vmin;
-    right: 0;
-    width: 45vmin;
-    height: 10vmin;
-
-    font-size: 8vmin;
-    background: rgba(255, 255, 255, .4);
-    border: solid 2px white;
-    cursor: pointer;
-
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-#menu.hover {  
-    animation-name:menu-chs;
-    animation-duration: 350ms;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-out;
-
-}
-
-#menu.out{
-    animation-name: menu-cho;
-    animation-delay:350ms;
-    animation-duration: 350ms;
-    animation-fill-mode: backwards;
-    animation-timing-function: ease-out;
-}
-
-#menus {
-    position: absolute;
-    top: calc(10vmin - 2px);
-    right: -2px;
-    width: calc(100vw + 4px);
-    height: 0;
-
-    background:url(./img/nc119332.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center bottom;
-
-    z-index: auto;
-    overflow: hidden;
-    color: white;
-
-    text-align:left;
-}
-
-#menus.hover {
-    position: absolute;
-    height: calc(100vh - 12vmin - 2vmin);
-
-    background:url(./img/nc119332.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center bottom;
-
-    transition: all 350ms ease-out;
-    transition-delay: 450ms;
-    z-index: 1;
-}
-
-#menu-contents {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: calc(100% + 16px);
-    height: inherit;
-
-    overflow-y: scroll;
-    overflow-x: hidden;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-right: -16px;
-    margin-left: 0;
-    list-style: none;
-    padding: 0;
-
-    text-shadow: 0 0 5px white;
-}
-
-#menu-contents li {
-    margin: 0;
-    margin-left: .5em;
-    margin-top: .25em;    
-
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-}
-
-#menu-contents li:hover {
-    background: linear-gradient(90deg, rgba(16, 87, 121, .9), rgba(16, 87, 121, .1));
-    box-shadow: 0 0 5px white;
-    text-shadow: 0 0 10px white;
-    color: white;
-}
-
-#music-menus {
-    position: absolute;
-    top: calc(10vmin - 2px);
-    right: -2px;
-    width: calc(100vw + 4px);
-    height: 0;
-
-    background:url(./img/nc119332.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center bottom;
-
-    z-index: auto;
-    overflow: hidden;
-    color: white;
-
-    text-align:left;
-}
-
-#music-menus.hover {
-    position: absolute;
-    height: calc(100vh - 12vmin - 2vmin);
-
-    background:url(./img/nc119332.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center bottom;
-
-    transition: all 350ms ease-out;
-    transition-delay: 450ms;
-    z-index: 1;
-}
-
-#music-menu-contents li{
-    margin:0;
-    margin-left:.5em;
-    margin-top:.25em;
-}
-
-#music-menu-contents {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: calc(100% + 16px);
-    height: inherit;
-
-    overflow-y: scroll;
-    overflow-x: hidden;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-right: -16px;
-    margin-left: 0;
-    list-style: none;
-    padding: 0;
-
-    text-shadow: 0 0 5px white;
-}
-
-#music-menu-contents li {
-    margin: 0;
-    margin-left: .5em;
-    margin-top: .25em;    
-
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-}
-
-#music-menu-contents li:hover {
-    background: linear-gradient(90deg, rgba(16, 87, 121, .9), rgba(16, 87, 121, .1));
-    box-shadow: 0 0 5px white;
-    text-shadow: 0 0 10px white;
-    color: white;
-}
-
-.input-range[type="range"] {
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: rgba(255, 255, 255, .7);
-  height: 2px;
-  width: calc(100% - 3em);
-  border-radius: 6px;
-
-  &:focus,
-  &:active {
-    outline: none;
-  }
-
-  &::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    cursor: pointer;
-    position: relative;
-    width: 20px;
-    height: 20px;
-    display: block;
-    border: 1px solid #717171;
-    background-color: #fff;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-  }
 }

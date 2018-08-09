@@ -19,6 +19,7 @@ document.getElementById("menu").addEventListener('click', () => {
         document.getElementById("gear-menus").className = "menus-style";
         document.getElementById("music-menus").className = "menus-style";        
         document.getElementById("bg-menus").className = "menus-style";
+        document.getElementById("circle-menus").className = "menus-style";
     }
 }, false);
 
@@ -28,6 +29,7 @@ document.getElementById("menus-close").addEventListener('click', () => {
     document.getElementById("music-menus").className = "menus-style";
     document.getElementById("gear-menus").className = "menus-style";
     document.getElementById("bg-menus").className = "menus-style";
+    document.getElementById("circle-menus").className = "menus-style";
 }, false);
 
 document.getElementById("menus").addEventListener("click",e=>e.stopPropagation());
@@ -94,7 +96,7 @@ var bgm = new Audio();
 bgm.src="./music/nc97701.mp3";
 bgm.loop = true;
 bgm.volume = .3;
-bgm.play();
+//bgm.play();
 
 document.getElementById("volume").addEventListener('input', () => {
     bgm.volume=document.getElementById("volume").value;
@@ -126,47 +128,76 @@ document.getElementById("bg-menu-back").addEventListener('click', () => {
 }, false);
 
 document.getElementById("bg1").addEventListener('click', () => {
-    document.getElementById("bg1").innerHTML="Star Night / Now"
-    document.getElementById("bg2").innerHTML="Tittle pattern"
-    document.getElementById("bg3").innerHTML="Sea"
-    document.getElementById("bg4").innerHTML="Light tree"
+    document.getElementById("bg1").innerHTML="Star Night / Now";
+    document.getElementById("bg2").innerHTML="Tittle pattern";
+    document.getElementById("bg3").innerHTML="Sea";
+    document.getElementById("bg4").innerHTML="Light tree";
     document.getElementById("bg").className = "one";
-    document.getElementById("circle").className = "one";
+    document.getElementById("circle").className = "circle-rotation one";
     document.getElementById("line-x").className = "one";
     document.getElementById("line-y").className = "one";    
 }, false);
 
 document.getElementById("bg2").addEventListener('click', () => {
-    document.getElementById("bg1").innerHTML="Star Night"
-    document.getElementById("bg2").innerHTML="Tittle pattern / Now"
-    document.getElementById("bg3").innerHTML="Sea"
-    document.getElementById("bg4").innerHTML="Light tree"
+    document.getElementById("bg1").innerHTML="Star Night";
+    document.getElementById("bg2").innerHTML="Tittle pattern / Now";
+    document.getElementById("bg3").innerHTML="Sea";
+    document.getElementById("bg4").innerHTML="Light tree";
     document.getElementById("bg").className = "two";
-    document.getElementById("circle").className = "two";
+    document.getElementById("circle").className = "circle-rotation two";
     document.getElementById("line-x").className = "two";
-    document.getElementById("line-y").className = "two";   
+    document.getElementById("line-y").className = "two";
+}, false);
 
-}, false);document.getElementById("bg3").addEventListener('click', () => {
-    document.getElementById("bg1").innerHTML="Star Night"
-    document.getElementById("bg2").innerHTML="Tittle pattern"
-    document.getElementById("bg3").innerHTML="Sea /Now"
-    document.getElementById("bg4").innerHTML="Light tree"
+document.getElementById("bg3").addEventListener('click', () => {
+    document.getElementById("bg1").innerHTML="Star Night";
+    document.getElementById("bg2").innerHTML="Tittle pattern";
+    document.getElementById("bg3").innerHTML="Sea /Now";
+    document.getElementById("bg4").innerHTML="Light tree";
     document.getElementById("bg").className = "three";
-    document.getElementById("circle").className = "three";
+    document.getElementById("circle").className = "circle-rotation three";
     document.getElementById("line-x").className = "three";
-    document.getElementById("line-y").className = "three";    
+    document.getElementById("line-y").className = "three";
+}, false);
 
-}, false);document.getElementById("bg4").addEventListener('click', () => {
-    document.getElementById("bg1").innerHTML="Star Night"
-    document.getElementById("bg2").innerHTML="Tittle pattern"
-    document.getElementById("bg3").innerHTML="Sea"
-    document.getElementById("bg4").innerHTML="Light tree / Now"
+document.getElementById("bg4").addEventListener('click', () => {
+    document.getElementById("bg1").innerHTML="Star Night";
+    document.getElementById("bg2").innerHTML="Tittle pattern";
+    document.getElementById("bg3").innerHTML="Sea";
+    document.getElementById("bg4").innerHTML="Light tree / Now";
     document.getElementById("bg").className = "four";
-    document.getElementById("circle").className = "four";
+    document.getElementById("circle").className = "circle-rotation four";
     document.getElementById("line-x").className = "four";
     document.getElementById("line-y").className = "four";    
 }, false);
 
+//circle-menu--------------------------------------------------------
+/*document.getElementById("circle-menus").addEventListener("click",e=>e.stopPropagation());
+
+document.getElementById("circle-chenge").addEventListener('click', () => {
+    document.getElementById("circle-menus").className = "menus-style hover";
+    document.getElementById("menus").className = "menus-style";
+}, false);
+
+document.getElementById("circle-menu-back").addEventListener('click', () => {
+    document.getElementById("circle-menus").className = "menus-style";
+    document.getElementById("menus").className = "menus-style hover";
+}, false);
+
+document.getElementById("circle-static").addEventListener('click', () => {
+    document.getElementById("circle-static").innerHTML="Static / Now";
+    document.getElementById("circle-dynamic").innerHTML="Dynamic";
+    document.getElementById("circle").className = "";   
+    document.getElementById("circle2").className = "";   
+}, false);
+
+document.getElementById("circle-dynamic").addEventListener('click', () => {
+    document.getElementById("circle-static").innerHTML="Static";
+    document.getElementById("circle-dynamic").innerHTML="Dynamic / Now";
+    document.getElementById("circle").className = "circle-rotation";   
+    document.getElementById("circle2").className = "circle-rotation";   
+}, false);
+*/
 //start-menu---------------------------------------------------------
 document.getElementById("start").addEventListener('click', () => {
     if (document.getElementById("start").className!="hover") {

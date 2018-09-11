@@ -1,13 +1,29 @@
-var clicka = false;
-document.getElementById("scroll").addEventListener('click', () => {
-    clicka = !clicka;
-    if (clicka) {
-        document.getElementById("scroll").className = "hover";
-    } else {
-        document.getElementById("scroll").className = "out";
-    }
+//scroll-------------------------------------------------------------
+document.getElementById("scroll-type-title").addEventListener('click', () => {
+    document.getElementById("scroll").className = "hover";
+    document.getElementById("scroll-type-title").style.height = "0";
+
+    document.getElementById("scroll-type-history-bg").style.opacity = "1";
+    document.getElementById("scroll-type-poem-bg").style.opacity = "1";
+
+    document.getElementById("scroll-type-history").style.opacity = "1";
+    document.getElementById("scroll-type-poem").style.opacity = "1";
+
+    document.getElementById("scroll-type-close").style.opacity = "1";
 }, false);
 
+document.getElementById("scroll-type-close").addEventListener('click', () => {
+    document.getElementById("scroll").className = "out";
+    document.getElementById("scroll-type-title").style.height = "6vmin";
+
+    document.getElementById("scroll-type-history-bg").style.opacity = "0";
+    document.getElementById("scroll-type-poem-bg").style.opacity = "0";
+
+    document.getElementById("scroll-type-history").style.opacity = "0";
+    document.getElementById("scroll-type-poem").style.opacity = "0";
+
+    document.getElementById("scroll-type-close").style.opacity = "0";
+}, false);
 //menu---------------------------------------------------------------
 document.getElementById("menu").addEventListener('click', () => {
     if (document.getElementById("menu").className != "hover") {
@@ -202,6 +218,7 @@ document.getElementById("circle-static").addEventListener('click', () => {
     document.getElementById("circle-dynamic").innerHTML = "Dynamic";
     document.getElementById("circle").className = "";
     document.getElementById("circle2").className = "";
+    document.getElementById("circle3").className = "";
 }, false);
 
 document.getElementById("circle-dynamic").addEventListener('click', () => {
@@ -209,6 +226,7 @@ document.getElementById("circle-dynamic").addEventListener('click', () => {
     document.getElementById("circle-dynamic").innerHTML = "Dynamic / Now";
     document.getElementById("circle").className = "circle-rotation";
     document.getElementById("circle2").className = "circle-rotation";
+    document.getElementById("circle3").className = "circle-rotation";
 }, false);
 
 //start-menu---------------------------------------------------------
